@@ -1,4 +1,8 @@
 # Análise de Dados de E-Commerce com SQL
+
+![ChatGPT Image 2 de jun  de 2025, 18_12_30](https://github.com/user-attachments/assets/3966da57-e79f-43b5-97bd-ff43b1298ebd)
+
+
 A análise de dados se tornou essencial na maioria das empresas hoje em dia. Os insights derivados da análise de dados podem resultar em melhorias significativas em várias indústrias e áreas de negócios. 
 
 Neste artigo, irei realizar uma análise em um conjunto de dados de bem conhecido de E-Commerce do Brasil, o que nos permitirá compreender melhor o comportamento do consumidor, avaliar o desempenho de produtos e funcionários, entre outras informações, utilizando a linguagem SQL.
