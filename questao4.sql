@@ -1,19 +1,20 @@
--- Maior Avaliação
 SELECT 
     oi.product_id, 
     p.product_category_name, 
-    AVG(orv.review_score) AS media_avaliacao, 
+    ROUND(AVG(orv.review_score), 2) AS media_avaliacao, 
     COUNT(orv.review_score) AS qnt_avaliacoes
 FROM 
-    olist_order_reviews orv
+    olist_order_reviews AS orv
 JOIN 
-    olist_order_items oi ON orv.order_id = oi.order_id
+    olist_order_items AS oi ON orv.order_id = oi.order_id
 JOIN 
-    olist_products p ON oi.product_id = p.product_id
+    olist_products AS p ON oi.product_id = p.product_id
 GROUP BY 
     oi.product_id, 
     p.product_category_name
+HAVING 
+    COUNT(orv.review_score) >= 20 -- garante relevância
 ORDER BY 
-    qnt_avaliacoes DESC, 
-    media_avaliacao DESC;
+    media_avaliacao DESC, 
+    qnt_avaliacoes DESC;
 
